@@ -1,10 +1,5 @@
-
-###################
-####python 3.x#####
-#discord.py==1.4.0#
-###################
-
 import discord
+import os
 
 client = discord.Client()
 
@@ -56,5 +51,5 @@ async def on_message(message):
         await message.channel.send(embed=embed)
         await message.delete()
 
-
-client.run('★ODY4Mzc2NzE0MDE3OTE4OTk2.YPuw1g.fnJ1jEQq8hOvlJGKh5klK0ic9uM★')
+access_token =os.environ["BOT_TOKEN"]
+client.run(access_token)
